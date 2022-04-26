@@ -5,6 +5,7 @@ const port = 3001;
 const multer = require('multer');
 const upload = multer();
 
+app.use(express.static('client/build'));
 app.use(express.urlencoded({ extended: false }));
 
 app.get('/api/greeting', (req, res) => {
